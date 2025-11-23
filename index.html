@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starry Night Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="star-background"></div> 
+    
+    <div class="login-container">
+        <h1>Welcome Back</h1>
+        <form id="login-form">
+            
+            <div class="input-group">
+                <label for="q1">When our togetherness started?</label>
+                <input type="text" id="q1" placeholder="e.g., January 1, 2021" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="q2">What is the place we met first?</label>
+                <input type="text" id="q2" placeholder="e.g., Place Name" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="q3">When is my Birthday?</label>
+                <input type="text" id="q3" placeholder="e.g., January 1, 2021" required>
+            </div>
+            
+            <button type="submit">Login</button>
+            <p id="message" class="hidden"></p>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

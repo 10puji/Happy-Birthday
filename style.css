@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars due to star movement */
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Three.js Background Container */
+#star-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Login Form Container */
+.login-container {
+    position: relative;
+    z-index: 10; /* Bring the form to the front */
+    background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent white for a subtle effect */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Dark shadow for depth */
+    width: 350px;
+    backdrop-filter: blur(5px); /* Optional: blur the background behind the form */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Placeholder color for better visibility */
+::placeholder { 
+    color: rgba(255, 255, 255, 0.6); 
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cccccc;
+}
+
+/* Message Display */
+#message {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.success {
+    color: var(--primary-color);
+    background-color: #8aff8a; /* Light green for success */
+}
+
+.error {
+    color: var(--secondary-color);
+    background-color: #ff4d4d; /* Red for error */
+}
